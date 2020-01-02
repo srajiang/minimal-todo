@@ -1,13 +1,11 @@
-import todosReducer from './todos_reducer';
 import { combineReducers } from 'redux';
-import stepsReducer from './steps_reducer';
 import errorReducer from './error_reducer';
+import entitiesReducer from './entities_reducer';
 
-const rootReducer = combineReducers( {
+const rootReducer = combineReducers({
 
-    todos: todosReducer,
-    steps: stepsReducer,
-    errors: errorReducer
+    entities: entitiesReducer,
+    errors: errorReducer,
     
 })
 

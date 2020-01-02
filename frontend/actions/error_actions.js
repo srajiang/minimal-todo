@@ -7,7 +7,6 @@ export const receiveErrors = errors => {
         type: RECEIVE_ERRORS,
         errors
     }
-
 }
 ;
 
