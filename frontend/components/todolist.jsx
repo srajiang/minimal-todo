@@ -21,7 +21,7 @@ class ToDoList extends React.Component {
         return (
             <div className="todo-list-main">
 
-                <h1 id="task-list-header">🧗‍♀️ Task List</h1>
+                <h1 id="task-list-header">🧗‍♀️ To Do</h1>
 
                 <ul className="todo-list-container">
                     {
