@@ -1,0 +1,341 @@
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+    color: inherit;
+    font-family: inherit;
+    text-decoration: inherit;
+
+    background: transparent;
+
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1 {
+    padding-bottom: 10px;
+}
+
+span.complete-task {
+    transition: all 0.3s ease;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+
+    position: absolute; 
+    display:inline-block;
+    right:0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    
+}
+
+span.complete-task:hover {
+    background: #4fd964;
+    color:white;
+}
+
+.todo-list-main {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.todo-list-container {
+    padding-top: 30px;
+}
+
+.todo-list-item-container {
+    position: relative;
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.todo-list-item-container:hover {
+    transition: all 0.3s ease;
+    background-color: #ecebeb;
+}
+
+.todo-list-item-container:hover .todo-list-item-remove {
+    display: block;
+}
+
+.todo-list-new-item-form-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+.todo-list-new-item-form-container:hover .todo-list-item-remove{
+    display: block;
+}
+
+
+.todo-list-new-item-form > form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list-new-item-form .new-item-input {
+    font-size: 16px;
+    flex: 3 1 auto;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid white;
+
+}
+
+.todo-list-new-item-form .new-item-input:focus {
+    outline: none;
+    border-bottom: 3px solid #a3d39c;
+    transition: all .1s ease;
+}
+
+::placeholder {
+    opacity: .7;
+}
+
+.new-item-submit {
+    position: absolute;
+    border: none;
+    top: .75em;
+    right: 0;
+    width: 60px;
+    line-height: 125%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    opacity: .6;
+}
+
+.new-item-submit:focus {
+    outline: none;
+}
+
+.new-item-submit:hover {
+    transition: all .3s ease;
+    transform: scale(1.10);
+    opacity: .9;
+}
+
+.new-item-input-error-title {
+    position: absolute;
+    top: 75px;
+    font-size: 10px;
+    color: #a3d39c;
+}
+
+.new-item-input-error-body {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    font-size: 10px;
+    color: #a3d39c;
+}
+
+
+.todo-form-inactive {
+    font-size: 35px;
+    font-weight: 500;
+    opacity: .4;
+}
+
+.todo-form-inactive:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: all .1s linear;
+    opacity: .8;
+}
+
+.todo-detail-view {
+    display: flex;
+}
+
+#task-list-header {
+    border-bottom: .5px solid #dbdbdb;
+}
+
+.done-arrow {
+    line-height: 320%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.todo-detail {
+    /* background: #f4f4f4; */
+    width: 100%;
+}
+
+.todo-detail-text {
+    font-size: 14px;
+    padding-top: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+}
+
+.todo-list-item-remove {
+    display: none;
+    border: 1px solid #dbdbdb;
+    top: 5px;
+    left: 5px;
+    background-color: #dbdbdb;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.todo-list-item-remove > p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: .7em;
+    color: white;
+}
+
+.todo-list-item-remove:hover {
+    
+    transform: scale(1.10);
+    text-align: center;
+    background-color: #FF4136;
+    border: 1px solid #FF4136;
+    color: white;
+}
+
+.step-list {
+    padding: 20px;
+}
+.step-list-item {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.step-list-item-remove {
+    position: absolute;
+    top: 17px;
+    left: -20px;
+
+    border: 1px solid #e6e4e4;
+    background-color: #e6e4e4;
+    color: white;
+
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    line-height: .75;
+}
+
+.step-list-item-remove:hover {
+
+    background-color: #c5c5c5;
+    border: 1px solid #c5c5c5;
+    transform: scale(1.10);
+
+}
+
+.step-form-dismiss {
+    left: 0;
+    top: 5px;
+}
+
+.step-list-item-title {
+    flex: 3;
+}
+
+.step-list-item-done {
+    flex: 1, 1;
+    border: none;
+
+}
+
+.step-form-inactive {
+    font-size: 20px;
+    opacity: .7;
+    transition: all .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.step-form-inactive:hover {
+
+    transform: scale(1.10);
+    opacity: .9;
+    cursor: pointer;
+}
+
+.step-form {
+    padding-left: 35px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.prompt-text {
+    font-size: 16px;
+    margin-left: 5px;
+
+}
+
+.new-step-input {
+    width: 75%;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid white;
+}
+
+.new-step-input:focus {
+    outline: none;
+    border-bottom: 2px solid #a3d39c;
+    transition: all .1s ease;
+}
+
+.new-step-submit {
+    font-size: 25px;
+    border: none;
+    opacity: .7;
+    transition: all .3s ease;
+}
+
+.new-step-submit:hover {
+    transform: scale(1.10);
+    opacity: .9;
+}
+
+.step-list-item-done:focus {
+    outline: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
